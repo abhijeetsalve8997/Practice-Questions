@@ -16,7 +16,7 @@ public class Buildings {
         Scanner input = new Scanner (System.in);
         int N = input.nextInt();
         int [] arr = new int [N];
-        for (int a = 0; a < N; a++) {
+        for (int a = 0; a < arr.length-1; a++) {
             arr[a] = input.nextInt();
         }
         System.out.println(visibleBuildings(arr,N));
@@ -25,7 +25,7 @@ public class Buildings {
     public static int visibleBuildings (int [] arr, int N) {
         int count = 0;
         int max = 0;
-         for (int i = 0; i < N; i++) {
+         for (int i = 0; i < arr.length-1; i++) {
              if (arr[i] > max) {
                  max = arr[i];
                  count++;
