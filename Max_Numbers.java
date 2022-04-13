@@ -25,6 +25,23 @@ public class Max_Numbers {
             // 2nd Approach:
             for (int b = 0; b < 3; b++) {
                 System.out.print(arr[N-1-i]+" ");
+            // 3rd Approach: without using Arrays.sort method
+                 int max1 = 0, max2 = 0, max3 = 0;
+            for (int b = 0; b < arr.length; b++) {
+                if (max1 < arr[b]) {
+                    max3 = max2;
+                    max2 = max1;
+                    max1 = arr[b];
+                }
+                else if (max2 < max1 && max2 <= arr[b]) {
+                    max3 = max2;
+                    max2 = arr[b];
+                }
+                else if (max3 < max2 && max3 <= arr[b]) {
+                    max3 = arr[b];
+                }
+            }
+            System.out.println(max1+" "+max2+" "+max3);
             }
             tests--;
         }
