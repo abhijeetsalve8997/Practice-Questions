@@ -18,8 +18,13 @@ public class Max_Numbers {
                 arr[a] = input.nextInt();
             }
             Arrays.sort(arr);
+            // 1st Approach:
             for (int b = arr.length-1; b > arr.length-4; b--) {
                 System.out.print(arr[b]+" ");
+            }
+            // 2nd Approach:
+            for (int b = 0; b < 3; b++) {
+                System.out.print(arr[N-1-i]+" ");
             }
             tests--;
         }
