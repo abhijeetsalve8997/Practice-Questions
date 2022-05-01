@@ -24,10 +24,10 @@ public class Buildings {
 
     public static int visibleBuildings (int [] arr, int N) {
         int count = 0;
-        int max = 0;
+        int min = 0;
          for (int i = 0; i < arr.length-1; i++) {
-             if (arr[i] > max) {
-                 max = arr[i];
+             if (arr[i] > min) {
+                 min = arr[i];
                  count++;
              }
          }
