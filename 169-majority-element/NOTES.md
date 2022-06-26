@@ -5,3 +5,6 @@
 * If that's not the case, then count is decreamented and also if count becomes 0 then majority element is updated as well as count became 1.
 ​
 * In that way, Because constraints that saying "Majority element will always be exist" that's why the most occuring element is remained at last!
+​
+**Time Complexity: O(n)
+Space Complexity: O(1)**
