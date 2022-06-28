@@ -5,24 +5,24 @@ class Solution {
             freq[s.charAt(i) - 'a']++;
         }
         
-        Set<Integer> occupiedFreq = new HashSet<>();
-        int deletion = 0;
+        Set <Integer> occurances = new HashSet<>();
+        int deletionRequired = 0;
         
         for (int i = 0; i < 26; i++) {
             int currFreq = freq[i];
             while (currFreq > 0) {
-                if (occupiedFreq.contains(currFreq)) {
+                if (occurances.contains(currFreq)) {
                     currFreq--;
-                    deletion++;
+                    deletionRequired++;
                 }
                 else {
                     break;
                 }
             }
             if (currFreq != 0) {
-                occupiedFreq.add(currFreq);
+                occurances.add(currFreq);
             }
         }
-        return deletion;
+        return deletionRequired;
     }
 }
